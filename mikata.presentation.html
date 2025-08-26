@@ -123,13 +123,20 @@
         </div>
 
         <!-- Navigation -->
-        <div class="flex items-center justify-center mt-4 space-x-4">
+        <div id="navigation-controls" class="flex items-center justify-center mt-4 space-x-4">
             <button id="prev-btn" class="bg-white p-3 rounded-full shadow-md hover:bg-gray-200 transition disabled:opacity-50 disabled:cursor-not-allowed">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
             </button>
             <div id="slide-counter" class="text-gray-600 font-semibold text-lg">1 / 10</div>
             <button id="next-btn" class="bg-white p-3 rounded-full shadow-md hover:bg-gray-200 transition disabled:opacity-50 disabled:cursor-not-allowed">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            </button>
+             <!-- PDF Download Button -->
+            <button id="download-pdf-btn" class="bg-indigo-600 text-white px-4 py-3 rounded-full shadow-md hover:bg-indigo-700 transition flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                <span>PDFダウンロード</span>
             </button>
         </div>
     </div>
@@ -141,6 +148,7 @@
             const nextButton = document.getElementById('next-btn');
             const prevButton = document.getElementById('prev-btn');
             const slideCounter = document.getElementById('slide-counter');
+            const downloadPdfBtn = document.getElementById('download-pdf-btn');
             const slideCount = slides.length;
             let currentSlide = 0;
 
@@ -175,6 +183,43 @@
                 } else if (e.key === 'ArrowLeft') {
                     prevButton.click();
                 }
+            });
+
+            // PDF Download Logic
+            downloadPdfBtn.addEventListener('click', () => {
+                const originalTrack = document.getElementById('slide-track');
+                const slidesToPrint = Array.from(originalTrack.children);
+                
+                // Create a container for printing
+                const printContainer = document.createElement('div');
+                
+                // Clone each slide and append to the container
+                slidesToPrint.forEach(slideNode => {
+                    const clone = slideNode.cloneNode(true);
+                    // Style for printing
+                    clone.style.width = '1280px'; // A fixed width for consistent PDF output
+                    clone.style.height = '720px'; // 16:9 aspect ratio
+                    clone.style.overflow = 'hidden';
+                    clone.style.pageBreakAfter = 'always'; // Each slide on a new page
+                    printContainer.appendChild(clone);
+                });
+
+                // Hide the original presentation and show the print container
+                document.body.appendChild(printContainer);
+                
+                const opt = {
+                    margin:       0,
+                    filename:     '事業開発プレゼンテーション.pdf',
+                    image:        { type: 'jpeg', quality: 0.98 },
+                    html2canvas:  { scale: 2, useCORS: true },
+                    jsPDF:        { unit: 'in', format: 'letter', orientation: 'landscape' }
+                };
+
+                // Generate PDF
+                html2pdf().from(printContainer).set(opt).save().then(() => {
+                    // Clean up after saving
+                    document.body.removeChild(printContainer);
+                });
             });
 
             updateSlidePosition();
