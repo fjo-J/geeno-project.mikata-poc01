@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>事業開発プレゼンテーション（最終版）</title>
+    <title>素材用途開発プラットフォーム ご提案資料</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- PDF生成ライブラリの読み込み -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         body {
@@ -38,218 +37,233 @@
             height: 100%;
             background-color: white;
             overflow-y: auto;
-            /* Adjusted padding for better PDF fit */
-            padding: 2.25rem 3rem; 
+            padding: 2.5rem 3.5rem;
         }
-        /* Custom scrollbar for slides */
         .slide::-webkit-scrollbar { width: 8px; }
         .slide::-webkit-scrollbar-track { background: #f1f1f1; }
         .slide::-webkit-scrollbar-thumb { background: #a8a8a8; border-radius: 4px; }
         .slide::-webkit-scrollbar-thumb:hover { background: #7b7b7b; }
+        .shape-icon { display: flex; align-items: center; justify-content: center; }
     </style>
 </head>
 <body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
 
     <div id="presentation-container">
-        <!-- Slide Window -->
         <div id="slide-window">
             <div id="slide-track">
-                <!-- Slide 1: Title -->
+
                 <div class="slide flex flex-col items-center justify-center text-center bg-gray-800 text-white !p-8">
                     <div class="w-full max-w-4xl">
-                        <h1 class="text-5xl md:text-7xl font-bold tracking-tight">新規事業開発プロジェクト</h1>
-                        <p class="mt-6 text-2xl md:text-3xl text-indigo-300 font-semibold">素材の未来を共創する R&Dマッチングプラットフォーム</p>
+                        <p class="text-xl md:text-2xl text-indigo-300 font-semibold">素材のポテンシャルを、ビジネスの成長力に。</p>
+                        <h1 class="mt-4 text-4xl md:text-6xl font-bold tracking-tight">素材用途開発プラットフォーム<br>ご紹介資料</h1>
                         <div class="mt-12 border-t border-gray-600 pt-6">
-                            <p class="text-lg text-gray-400">事業開発レポート | Confidential</p>
+                            <p class="text-xl text-gray-200">株式会社Co-Labo Maker</p>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Slide 2: Executive Summary -->
+
                 <div class="slide">
-                    <header class="mb-8 text-center"><h1 class="text-4xl font-bold text-gray-800 tracking-tight">エグゼクティブサマリー</h1><p class="mt-3 text-lg text-indigo-600 font-semibold">本プレゼンテーションの要点</p></header>
-                    <main class="max-w-3xl mx-auto space-y-6"><div class="bg-gray-50 p-5 rounded-lg border-l-4 border-indigo-500"><h2 class="font-bold text-lg text-gray-800">1. 事業機会</h2><p class="mt-1 text-gray-600">巨大な国内R&D市場において、オープンイノベーションとサプライチェーン強靭化の波に乗り、未開拓の「技術的専門性」に特化したニッチ市場を開拓する。</p></div><div class="bg-gray-50 p-5 rounded-lg border-l-4 border-indigo-500"><h2 class="font-bold text-lg text-gray-800">2. 価値提案</h2><p class="mt-1 text-gray-600">R&D部門の「仮説検証の高速化」と、調達部門の「サプライチェーン革新」を、専門家ネットワークを通じて一気通貫で支援する。</p></div><div class="bg-gray-50 p-5 rounded-lg border-l-4 border-indigo-500"><h2 class="font-bold text-lg text-gray-800">3. GTM戦略</h2><p class="mt-1 text-gray-600">顧客課題を起点とする「マーケットイン」アプローチを徹底。6ヶ月で仮説検証から有償トライアル、そして本契約獲得までの再現性あるモデルを構築する。</p></div><div class="bg-gray-50 p-5 rounded-lg border-l-4 border-indigo-500"><h2 class="font-bold text-lg text-gray-800">4. 初期ターゲット</h2><p class="mt-1 text-gray-600">ビザスク等の既存サービスを利用し、外部知見活用の価値を既に理解している「教育された市場」に、より専門性の高いソリューションを提案する。</p></div></main>
+                    <header class="mb-6 text-center"><h1 class="text-4xl font-bold text-gray-800 tracking-tight">会社概要</h1></header>
+                    <main class="max-w-5xl mx-auto">
+                        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+                            <div class="md:col-span-2 flex justify-center">
+                                <div class="bg-indigo-600 text-white p-6 rounded-lg w-full text-center shadow-lg">
+                                     <h2 class="text-2xl font-bold">Co-Labo Maker</h2>
+                                     <p class="text-sm opacity-80">株式会社Co-Labo Maker</p>
+                                </div>
+                            </div>
+                            <div class="md:col-span-3 space-y-3">
+                                <div class="flex"><p class="font-bold text-gray-600 w-24">会社名</p><p class="text-gray-800">株式会社Co-Labo Maker</p></div>
+                                <div class="flex"><p class="font-bold text-gray-600 w-24">所在地</p><p class="text-gray-800">（ご担当者様にてご記入ください）</p></div>
+                                <div class="flex"><p class="font-bold text-gray-600 w-24">設立</p><p class="text-gray-800">（ご担当者様にてご記入ください）</p></div>
+                                <div class="flex"><p class="font-bold text-gray-600 w-24">URL</p><p class="text-indigo-600 hover:underline"><a href="https://co-labo-maker.com/" target="_blank" rel="noopener noreferrer">co-labo-maker.com</a></p></div>
+                                <div class="flex items-start"><p class="font-bold text-gray-600 w-24 pt-1">事業内容</p><div class="flex-1"><h3 class="font-semibold text-lg text-indigo-700">研究開発コラボレーションプラットフォーム</h3><p class="mt-1 text-sm text-gray-700 leading-relaxed">「研究開発に足りないものがすぐ見つかる」をコンセプトに、企業のR&D部門が必要とする技術、人材、設備、知見などを効率的に結びつけ、オープンイノベーションを加速させるプラットフォームを運営。</p></div></div>
+                            </div>
+                        </div>
+                    </main>
                 </div>
 
-                <!-- Slide 3: Business Overview -->
+                <div class="slide bg-gray-50">
+                    <header class="mb-6 text-center">
+                        <h1 class="text-4xl font-bold text-gray-800 tracking-tight">Co-Labo Maker 事業実績</h1>
+                        <p class="mt-3 text-lg text-indigo-600 font-semibold">研究開発の現場から、確かな信頼と成果を。</p>
+                    </header>
+                    <main class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                        <div class="space-y-6">
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <div class="bg-white p-4 rounded-lg shadow"><p class="text-sm text-gray-600">導入企業数</p><p class="text-3xl font-bold text-indigo-600">100社+</p></div>
+                                <div class="bg-white p-4 rounded-lg shadow"><p class="text-sm text-gray-600">累計マッチング相談</p><p class="text-3xl font-bold text-indigo-600">500件+</p></div>
+                                <div class="bg-white p-4 rounded-lg shadow"><p class="text-sm text-gray-600">大手素材メーカー利用率</p><p class="text-3xl font-bold text-indigo-600">80%</p></div>
+                                <div class="bg-white p-4 rounded-lg shadow"><p class="text-sm text-gray-600">顧客満足度</p><p class="text-3xl font-bold text-indigo-600">95%</p></div>
+                            </div>
+                            <div>
+                                <h2 class="text-xl font-bold text-gray-700 mb-3">ご導入企業様（一部抜粋）</h2>
+                                <div class="grid grid-cols-3 gap-3">
+                                    <div class="bg-white h-16 rounded-md flex items-center justify-center text-gray-500 border text-sm text-center">大手化学<br>メーカー</div>
+                                    <div class="bg-white h-16 rounded-md flex items-center justify-center text-gray-500 border text-sm text-center">総合電機<br>メーカー</div>
+                                    <div class="bg-white h-16 rounded-md flex items-center justify-center text-gray-500 border text-sm text-center">自動車部品<br>メーカー</div>
+                                    <div class="bg-white h-16 rounded-md flex items-center justify-center text-gray-500 border text-sm text-center">食品・飲料<br>メーカー</div>
+                                    <div class="bg-white h-16 rounded-md flex items-center justify-center text-gray-500 border text-sm text-center">医薬品<br>メーカー</div>
+                                    <div class="bg-white h-16 rounded-md flex items-center justify-center text-gray-500 border text-sm text-center">大学・<br>研究機関</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-5">
+                             <h2 class="text-xl font-bold text-gray-700 mb-3">お客様の声</h2>
+                            <div class="bg-white p-5 rounded-lg shadow-sm border-l-4 border-indigo-500">
+                                <p class="text-gray-700 leading-relaxed">「これまで数ヶ月かかっていた技術調査が、Co-Labo Maker sayesinde数週間に短縮。開発スピードが劇的に向上しました。」</p>
+                                <p class="text-right text-sm text-gray-500 mt-2">- 大手化学メーカー R&D部門長様 -</p>
+                            </div>
+                            <div class="bg-white p-5 rounded-lg shadow-sm border-l-4 border-indigo-500">
+                                <p class="text-gray-700 leading-relaxed">「自社技術の新たな用途を探していたところ、想定外の自動車業界から声がかかり、大型の共同開発に繋がりました。」</p>
+                                <p class="text-right text-sm text-gray-500 mt-2">- 機能性素材メーカー 事業開発部長様 -</p>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+
                 <div class="slide">
                     <header class="mb-8 text-center"><h1 class="text-4xl font-bold text-gray-800 tracking-tight">1. 事業概要とミッション</h1></header>
-                    <main class="grid grid-cols-1 md:grid-cols-2 gap-12"><div class="space-y-10"><div><h2 class="text-2xl font-bold text-gray-800 border-b-2 border-indigo-500 pb-2 mb-4 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>事業のビジョン</h2><p class="text-gray-600 leading-relaxed text-lg">あらゆる素材・技術のポテンシャルを最大化し、日本のものづくりにおけるオープンイノベーションを加速させる。</p></div><div><h2 class="text-2xl font-bold text-gray-800 border-b-2 border-indigo-500 pb-2 mb-4 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>解決する課題</h2><ul class="list-disc list-inside text-gray-600 space-y-3 text-lg"><li>自社の素材・技術の新たな用途が見つからない。</li><li>開発課題に最適な素材や技術を効率的に探せない。</li><li>クローズドな業界構造により、新規サプライヤーの開拓が困難。</li></ul></div></div><div class="flex flex-col items-center justify-center bg-gray-50 rounded-xl p-6"><h3 class="text-xl font-semibold text-gray-700 mb-6">ビジネスモデル</h3><div class="w-full flex items-center justify-between space-x-4"><div class="text-center w-1/3"><div class="bg-white p-4 rounded-lg shadow-md border"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg></div><p class="mt-2 font-semibold text-gray-700">用途開発 /<br>素材研究部門</p></div><div class="flex-grow flex flex-col items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg><div class="w-24 text-center my-2 px-3 py-1 bg-indigo-500 text-white rounded-full font-bold shadow">MATCH</div><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 16l-4-4m0 0l4-4m-4 4h18" /></svg></div><div class="text-center w-1/3"><div class="bg-white p-4 rounded-lg shadow-md border"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2-2h8a1 1 0 001-1z" /></svg></div><p class="mt-2 font-semibold text-gray-700">素材メーカー /<br>調達部門</p></div></div><div class="mt-8 text-center text-gray-600 bg-indigo-50 border-l-4 border-indigo-400 p-4 rounded-r-lg"><span class="font-bold">提供価値:</span> 専門家の知見も活用し、質の高いマッチングと課題解決をスピーディーに実現。</div></div></main>
+                    <main class="grid grid-cols-1 md:grid-cols-2 gap-12"><div class="space-y-10"><div><h2 class="text-2xl font-bold text-gray-800 border-b-2 border-indigo-500 pb-2 mb-4 flex items-center"><div class="shape-icon w-6 h-6 mr-3"><div class="w-5 h-5 bg-indigo-200 rounded-full flex items-center justify-center"><div class="w-2 h-2 bg-indigo-500 rounded-full"></div></div></div>事業のビジョン</h2><p class="text-gray-600 leading-relaxed text-lg">あらゆる素材・技術のポテンシャルを最大化し、日本のものづくりにおけるオープンイノベーションを加速させる。</p></div><div><h2 class="text-2xl font-bold text-gray-800 border-b-2 border-indigo-500 pb-2 mb-4 flex items-center"><div class="shape-icon w-6 h-6 mr-3 text-red-500 font-bold text-2xl">!</div>解決する課題</h2><ul class="list-disc list-inside text-gray-600 space-y-3 text-lg"><li>自社の素材・技術の新たな用途が見つからない。</li><li>開発課題に最適な素材や技術を効率的に探せない。</li><li>クローズドな業界構造により、新規サプライヤーの開拓が困難。</li></ul></div></div><div class="flex flex-col items-center justify-center bg-gray-50 rounded-xl p-6"><h3 class="text-xl font-semibold text-gray-700 mb-6">ビジネスモデル</h3><div class="w-full flex items-center justify-between space-x-4"><div class="text-center w-1/3"><div class="shape-icon w-16 h-16 mx-auto mb-2"><div class="w-8 h-8 rounded-full bg-blue-300 relative"><div class="absolute w-4 h-10 bg-blue-300 rounded-t-md top-[-30px] left-1/2 -translate-x-1/2"></div></div></div><p class="mt-2 font-semibold text-gray-700">用途開発 /<br>素材研究部門</p></div><div class="flex-grow flex flex-col items-center"><div class="w-24 text-center my-2 px-3 py-1 bg-indigo-500 text-white rounded-full font-bold shadow">MATCH</div></div><div class="text-center w-1/3"><div class="shape-icon w-16 h-16 mx-auto mb-2"><div class="w-12 h-10 bg-green-300 flex items-end"><div class="w-3 h-6 bg-green-500 ml-1"></div><div class="w-3 h-8 bg-green-500 ml-1"></div><div class="w-3 h-4 bg-green-500 ml-1"></div></div></div><p class="mt-2 font-semibold text-gray-700">素材メーカー /<br>調達部門</p></div></div><div class="mt-8 text-center text-gray-600 bg-indigo-50 border-l-4 border-indigo-400 p-4 rounded-r-lg"><span class="font-bold">提供価値:</span> 専門家の知見も活用し、質の高いマッチングと課題解決をスピーディーに実現。</div></div></main>
+                </div>
+                
+                <div class="slide flex flex-col items-center justify-center">
+                    <header class="text-center mb-10"><h1 class="text-4xl font-bold text-gray-800 tracking-tight">用途開発支援が必要な背景</h1><p class="mt-3 text-lg text-indigo-600 font-semibold">優れた素材や技術が、その真価を発揮しきれていない「3つの壁」</p></header>
+                    <main class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-amber-50 p-6 rounded-xl border-t-4 border-amber-500 text-center flex flex-col items-center shadow-md"><div class="shape-icon text-4xl mb-4 text-amber-700 font-serif font-bold">?</div><h2 class="text-xl font-bold text-gray-800 mb-2">「宝の持ち腐れ」</h2><p class="text-gray-600 leading-relaxed flex-grow">自社が持つユニークな素材や技術。しかし、既存事業の延長線上しか見えず、全く新しい市場や用途への展開が描けていない。</p></div>
+                        <div class="bg-red-50 p-6 rounded-xl border-t-4 border-red-500 text-center flex flex-col items-center shadow-md"><div class="shape-icon w-12 h-12 mb-4"><div class="w-10 h-10 border-2 border-red-500 rounded-full relative"><div class="absolute h-5 w-1 bg-red-500 top-1/2 left-1/2 -translate-x-1/2 -translate-y-full"></div><div class="absolute w-3 h-1 bg-red-500 top-1/2 left-1/2 -translate-y-1/2"></div></div></div><h2 class="text-xl font-bold text-gray-800 mb-2">非効率な探索</h2><p class="text-gray-600 leading-relaxed flex-grow">新製品開発で求める特性を持つ素材を探したいが、誰に聞けば良いかわからない。展示会や論文検索では時間がかかりすぎる。</p></div>
+                        <div class="bg-gray-100 p-6 rounded-xl border-t-4 border-gray-500 text-center flex flex-col items-center shadow-md"><div class="shape-icon w-12 h-12 mb-4 flex-col"><div class="w-full h-2 bg-gray-500"></div><div class="w-full h-2 bg-gray-500 mt-2"></div><div class="w-full h-2 bg-gray-500 mt-2"></div></div><h2 class="text-xl font-bold text-gray-800 mb-2">閉じた業界構造</h2><p class="text-gray-600 leading-relaxed flex-grow">長年の取引関係が優先され、新規性や技術力を持つ新しいサプライヤーが参入しにくい。結果、イノベーションが停滞する。</p></div>
+                    </main>
                 </div>
 
-                <!-- Slide 4: Market Analysis -->
+                <div class="slide flex flex-col items-center justify-center bg-gray-50">
+                    <header class="text-center mb-10"><h1 class="text-4xl font-bold text-gray-800 tracking-tight">課題の解決手段</h1><p class="mt-3 text-lg text-indigo-600 font-semibold">我々のプラットフォームが「3つの壁」を打ち破ります</p></header>
+                    <main class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-amber-500"><h2 class="text-xl font-bold text-amber-600 mb-3">価値の再発見</h2><p class="text-gray-700 leading-relaxed">貴社の素材・技術シーズを登録することで、想定外の業界からニーズが舞い込みます。「宝の持ち腐れ」を防ぎ、新たな事業の柱を育成します。</p></div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-red-500"><h2 class="text-xl font-bold text-red-600 mb-3">効率的な探索</h2><p class="text-gray-700 leading-relaxed">開発に必要な要件を入力するだけで、最適な素材や技術を持つ企業を検索可能。非効率な探索活動から解放され、コア業務に集中できます。</p></div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-gray-500"><h2 class="text-xl font-bold text-gray-600 mb-3">オープンな出会い</h2><p class="text-gray-700 leading-relaxed">業界の垣根を越えたオープンなプラットフォームが、これまでの商習慣では生まれなかった新しい出会いを創出。サプライチェーンを革新します。</p></div>
+                    </main>
+                </div>
+                
                 <div class="slide">
                     <header class="mb-8 text-center"><h1 class="text-4xl font-bold text-gray-800 tracking-tight">2. 市場分析と事業機会</h1><p class="mt-3 text-lg text-indigo-600 font-semibold">国内R&D市場の変革期に生まれる、高価値な事業領域</p></header>
-                    <main class="space-y-10"><div><h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">日本市場における3つの追い風</h2><div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center"><div class="bg-gray-50 p-6 rounded-xl border"><div class="flex justify-center items-center h-16 w-16 bg-purple-100 text-purple-600 rounded-full mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.121 15.536c-1.171 1.952-3.07 1.952-4.242 0-1.172-1.953-1.172-5.119 0-7.072 1.171-1.952 3.07-1.952 4.242 0 1.172 1.953 1.172 5.119 0 7.072z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 12h.01M4.879 4.879l1.415 1.415M17.698 17.698l1.414 1.414M4.879 19.121l1.415-1.415M19.121 4.879l-1.414 1.415" /></svg></div><h3 class="text-lg font-semibold text-gray-800">巨大な研究開発投資</h3><p class="text-3xl font-bold text-purple-600 mt-2">15.1<span class="text-xl ml-1">兆円</span></p><p class="text-sm text-gray-500 mt-2">投資効率の向上が経営の最重要課題に</p></div><div class="bg-gray-50 p-6 rounded-xl border"><div class="flex justify-center items-center h-16 w-16 bg-blue-100 text-blue-600 rounded-full mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div><h3 class="text-lg font-semibold text-gray-800">オープンイノベーション加速</h3><p class="text-sm text-gray-600 mt-2 leading-relaxed">自前主義から脱却が必須となる中、「適切な連携先が見つからない」という課題が深刻化。</p></div><div class="bg-gray-50 p-6 rounded-xl border"><div class="flex justify-center items-center h-16 w-16 bg-green-100 text-green-600 rounded-full mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2-2h8a1 1 0 001-1z" /><path stroke-linecap="round" stroke-linejoin="round" d="M18 18h2a1 1 0 001-1v-6a1 1 0 00-1-1h-1l-1-4H4l-1 4H2" /></svg></div><h3 class="text-lg font-semibold text-gray-800">サプライチェーン強靭化</h3><p class="text-sm text-gray-600 mt-2 leading-relaxed">地政学リスクや環境規制に対応するため、サプライヤーの多様化や国内回帰が進行。</p></div></div></div><div><h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">用途開発ニーズが集中する3大産業領域</h2><div class="grid grid-cols-1 lg:grid-cols-3 gap-6"><div class="bg-indigo-50 p-6 rounded-xl border-l-4 border-indigo-500"><div class="flex items-center mb-4"><div class="flex-shrink-0 bg-indigo-500 text-white h-12 w-12 rounded-lg flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg></div><h3 class="ml-4 text-xl font-bold text-gray-800">自動車</h3></div><ul class="list-disc list-inside text-gray-600 space-y-2 text-sm"><li>EV向け軽量化素材、高放熱材料</li><li>次世代電池・全固体電池関連技術</li><li>サステナブルな内装材</li></ul></div><div class="bg-teal-50 p-6 rounded-xl border-l-4 border-teal-500"><div class="flex items-center mb-4"><div class="flex-shrink-0 bg-teal-500 text-white h-12 w-12 rounded-lg flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg></div><h3 class="ml-4 text-xl font-bold text-gray-800">電機・半導体</h3></div><ul class="list-disc list-inside text-gray-600 space-y-2 text-sm"><li>5G/6G対応の低誘電率材料</li><li>マイクロLEDディスプレイ用部材</li><li>環境配慮型のエレクトロニクス素材</li></ul></div><div class="bg-amber-50 p-6 rounded-xl border-l-4 border-amber-500"><div class="flex items-center mb-4"><div class="flex-shrink-0 bg-amber-500 text-white h-12 w-12 rounded-lg flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg></div><h3 class="ml-4 text-xl font-bold text-gray-800">化学・素材</h3></div><ul class="list-disc list-inside text-gray-600 space-y-2 text-sm"><li>自社ポリマー、複合材料の新規用途</li><li>バイオマス、生分解性素材の市場開拓</li><li>研究開発成果の事業化パートナー探索</li></ul></div></div></div></main>
+                    <main class="space-y-10"><div><h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">日本市場における3つの追い風</h2><div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center"><div class="bg-gray-50 p-6 rounded-xl border"><div class="shape-icon h-16 w-16 bg-purple-100 text-purple-600 rounded-full mx-auto mb-4 text-3xl font-bold">¥</div><h3 class="text-lg font-semibold text-gray-800">巨大な研究開発投資</h3><p class="text-3xl font-bold text-purple-600 mt-2">15.1<span class="text-xl ml-1">兆円</span></p><p class="text-sm text-gray-500 mt-2">投資効率の向上が経営の最重要課題に</p></div><div class="bg-gray-50 p-6 rounded-xl border"><div class="shape-icon h-16 w-16 bg-blue-100 rounded-full mx-auto mb-4"><div class="w-4 h-4 bg-blue-600 rounded-full"></div><div class="w-8 h-1 bg-blue-600"></div><div class="w-4 h-4 bg-blue-600 rounded-full"></div></div><h3 class="text-lg font-semibold text-gray-800">オープンイノベーション加速</h3><p class="text-sm text-gray-600 mt-2 leading-relaxed">自前主義から脱却が必須となる中、「適切な連携先が見つからない」という課題が深刻化。</p></div><div class="bg-gray-50 p-6 rounded-xl border"><div class="shape-icon h-16 w-16 bg-green-100 rounded-full mx-auto mb-4"><div class="w-3 h-3 bg-green-600"></div><div class="w-px h-4 bg-green-600"></div><div class="flex w-full justify-between"><div class="w-3 h-3 bg-green-600"></div><div class="w-3 h-3 bg-green-600"></div></div></div><h3 class="text-lg font-semibold text-gray-800">サプライチェーン強靭化</h3><p class="text-sm text-gray-600 mt-2 leading-relaxed">地政学リスクや環境規制に対応するため、サプライヤーの多様化や国内回帰が進行。</p></div></div></div><div><h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">用途開発ニーズが集中する3大産業領域</h2><div class="grid grid-cols-1 lg:grid-cols-3 gap-6"><div class="bg-indigo-50 p-6 rounded-xl border-l-4 border-indigo-500"><div class="flex items-center mb-4"><div class="shape-icon flex-shrink-0 bg-indigo-500 text-white h-12 w-12 rounded-lg"><div class="w-8 h-4 bg-white rounded-t-lg"></div><div class="w-10 h-3 bg-white flex justify-around"><div class="w-2 h-2 rounded-full bg-indigo-500"></div><div class="w-2 h-2 rounded-full bg-indigo-500"></div></div></div><h3 class="ml-4 text-xl font-bold text-gray-800">自動車</h3></div><ul class="list-disc list-inside text-gray-600 space-y-2 text-sm"><li>EV向け軽量化素材、高放熱材料</li><li>次世代電池・全固体電池関連技術</li><li>サステナブルな内装材</li></ul></div><div class="bg-teal-50 p-6 rounded-xl border-l-4 border-teal-500"><div class="flex items-center mb-4"><div class="shape-icon flex-shrink-0 bg-teal-500 text-white h-12 w-12 rounded-lg"><div class="w-9 h-6 bg-white rounded-sm"></div></div><h3 class="ml-4 text-xl font-bold text-gray-800">電機・半導体</h3></div><ul class="list-disc list-inside text-gray-600 space-y-2 text-sm"><li>5G/6G対応の低誘電率材料</li><li>マイクロLEDディスプレイ用部材</li><li>環境配慮型のエレクトロニクス素材</li></ul></div><div class="bg-amber-50 p-6 rounded-xl border-l-4 border-amber-500"><div class="flex items-center mb-4"><div class="shape-icon flex-shrink-0 bg-amber-500 text-white h-12 w-12 rounded-lg"><div class="w-6 h-6 rounded-full bg-white relative"><div class="absolute w-3 h-8 bg-white rounded-t-md top-[-20px] left-1/2 -translate-x-1/2"></div></div></div><h3 class="ml-4 text-xl font-bold text-gray-800">化学・素材</h3></div><ul class="list-disc list-inside text-gray-600 space-y-2 text-sm"><li>自社ポリマー、複合材料の新規用途</li><li>バイオマス、生分解性素材の市場開拓</li><li>研究開発成果の事業化パートナー探索</li></ul></div></div></div></main>
                 </div>
 
-                <!-- Slide 5: Competitor Analysis -->
                 <div class="slide flex flex-col">
-                    <header class="mb-6 text-center"><h1 class="text-3xl sm:text-4xl font-bold text-gray-800 tracking-tight">3. 競合分析と我々の勝機</h1><p class="mt-2 text-lg sm:text-xl text-indigo-600 font-semibold">なぜ「後発」であることは、むしろ「強み」なのか</p></header>
-                    <main class="flex-grow grid grid-cols-2 gap-8 items-start"><div class="bg-gray-50 rounded-xl p-6 h-full flex flex-col"><div class="text-center mb-4"><h2 class="text-2xl font-bold text-gray-700">先行者：ビザスク</h2><p class="font-semibold text-gray-500">市場を創造した「百貨店」</p></div><div class="flex-grow"><div class="flex justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg></div><ul class="space-y-3 text-sm"><li class="flex items-start"><span class="text-green-500 font-bold mr-2">✓</span><div><strong class="font-semibold text-gray-800">市場の教育：</strong>「外部知見の活用」という文化と予算を市場に創造した。</div></li><li class="flex items-start"><span class="text-green-500 font-bold mr-2">✓</span><div><strong class="font-semibold text-gray-800">幅広いカバレッジ：</strong>500以上の業界を網羅し、あらゆるビジネス課題に対応。</div></li><li class="flex items-start"><span class="text-red-500 font-bold mr-2">✕</span><div><strong class="font-semibold text-gray-800">潜在的な不満：</strong>専門性が深くなるほど、本当に的確な人物を見つけるのが困難。「質」にばらつきがある。</div></li></ul></div><div class="mt-6 text-center text-gray-600 text-sm bg-white p-3 rounded-md border">彼らが耕した豊かな土壌に、我々は専門性という鋭い種を蒔く。</div></div><div class="bg-indigo-50 rounded-xl p-6 h-full flex flex-col border-2 border-indigo-500 shadow-2xl"><div class="text-center mb-4"><h2 class="text-2xl font-bold text-indigo-600">我々のサービス</h2><p class="font-semibold text-indigo-400">課題をえぐる「専門ブティック」</p></div><div class="flex-grow"><div class="flex justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg></div><ul class="space-y-3 text-sm"><li class="flex items-start"><span class="text-indigo-500 font-bold mr-2">✓</span><div><strong class="font-semibold text-gray-800">教育された市場：</strong>既に価値を理解している顧客に、より高度な提案が可能。</div></li><li class="flex items-start"><span class="text-indigo-500 font-bold mr-2">✓</span><div><strong class="font-semibold text-gray-800">専門領域特化：</strong>「材料科学・エンジニアリング」に絞り、質の高い専門家ネットワークを構築。</div></li><li class="flex items-start"><span class="text-indigo-500 font-bold mr-2">✓</span><div><strong class="font-semibold text-gray-800">課題解決型：</strong>単なるマッチングではなく、BizDevが伴走し、具体的な課題解決までを支援。</div></li></ul></div><div class="mt-6 text-center text-indigo-800 text-sm bg-indigo-100 p-3 rounded-md border border-indigo-200">「誰でもいい」ではなく「この人でなければ」という出会いを創出する。</div></div></main>
+                    <header class="mb-6 text-center"><h1 class="text-3xl sm:text-4xl font-bold text-gray-800 tracking-tight">3. 競合分析と我々の勝機</h1></header>
+                    <main class="flex-grow grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch"><div class="bg-gray-50 rounded-xl p-6 h-full flex flex-col"><div class="text-center mb-4"><h2 class="text-2xl font-bold text-gray-700">ビザスク</h2><p class="font-semibold text-gray-500">知見の「百貨店」</p></div><div class="flex-grow"><div class="shape-icon text-6xl text-gray-400 w-16 h-16 mx-auto mb-4"><div class="w-12 h-16 bg-gray-300"><div class="w-full h-3 bg-gray-400"></div></div></div><ul class="space-y-3 text-sm"><li class="flex items-start"><span class="text-green-500 font-bold mr-2">✓</span><div><strong class="font-semibold text-gray-800">市場の教育：</strong>「外部知見の活用」という文化と予算を市場に創造。</div></li><li class="flex items-start"><span class="text-green-500 font-bold mr-2">✓</span><div><strong class="font-semibold text-gray-800">幅広いカバレッジ：</strong>あらゆるビジネス課題に対応する広範な専門家網。</div></li><li class="flex items-start"><span class="text-red-500 font-bold mr-2">✕</span><div><strong class="font-semibold text-gray-800">専門性のばらつき：</strong>技術の専門性が深くなるほど最適な人材の探索が困難。</div></li></ul></div><div class="mt-6 text-center text-gray-600 text-sm bg-white p-3 rounded-md border">彼らが耕した土壌に、我々は専門性という鋭い種を蒔く。</div></div><div class="bg-gray-50 rounded-xl p-6 h-full flex flex-col"><div class="text-center mb-4"><h2 class="text-2xl font-bold text-gray-700">リンカーズ</h2><p class="font-semibold text-gray-500">目利きの「専門商社」</p></div><div class="flex-grow"><div class="shape-icon text-6xl text-gray-400 w-16 h-16 mx-auto mb-4 flex items-center justify-center"><div class="w-5 h-5 rounded-full bg-gray-400"></div><div class="w-1 h-6 bg-gray-400 -mx-2"></div><div class="w-5 h-5 rounded-full bg-gray-400"></div></div><ul class="space-y-3 text-sm"><li class="flex items-start"><span class="text-green-500 font-bold mr-2">✓</span><div><strong class="font-semibold text-gray-800">質の高い目利き：</strong>専門コーディネーターが介在し、マッチング精度を担保。</div></li><li class="flex items-start"><span class="text-green-500 font-bold mr-2">✓</span><div><strong class="font-semibold text-gray-800">独自ネットワーク：</strong>金融機関等との連携による、優良な中堅・中小企業網。</div></li><li class="flex items-start"><span class="text-red-500 font-bold mr-2">✕</span><div><strong class="font-semibold text-gray-800">探索の網羅性：</strong>人手を介するため、網羅的な探索やスピード感では劣る可能性。</div></li></ul></div><div class="mt-6 text-center text-gray-600 text-sm bg-white p-3 rounded-md border">彼らは「人」の介在価値を最大化し、深い課題解決を提供する。</div></div><div class="bg-indigo-50 rounded-xl p-6 h-full flex flex-col border-2 border-indigo-500 shadow-lg"><div class="text-center mb-4"><h2 class="text-2xl font-bold text-indigo-600">我々のサービス</h2><p class="font-semibold text-indigo-400">課題をえぐる「専門ブティック」</p></div><div class="flex-grow"><div class="shape-icon text-6xl text-indigo-500 w-16 h-16 mx-auto mb-4"><div class="w-8 h-8 rounded-full bg-indigo-300 relative"><div class="absolute w-4 h-10 bg-indigo-300 rounded-t-md top-[-30px] left-1/2 -translate-x-1/2"></div></div></div><ul class="space-y-3 text-sm"><li class="flex items-start"><span class="text-indigo-500 font-bold mr-2">✓</span><div><strong class="font-semibold text-gray-800">専門領域特化：</strong>「材料科学」に絞り、質の高い専門家と技術データベースを構築。</div></li><li class="flex items-start"><span class="text-indigo-500 font-bold mr-2">✓</span><div><strong class="font-semibold text-gray-800">プラットフォームの効率性：</strong>網羅性とスピードを両立し、セレンディピティを誘発。</div></li><li class="flex items-start"><span class="text-indigo-500 font-bold mr-2">✓</span><div><strong class="font-semibold text-gray-800">課題解決型：</strong>BizDevが伴走し、単なるマッチングに終わらない具体的な事業化までを支援。</div></li></ul></div><div class="mt-6 text-center text-indigo-800 text-sm bg-indigo-100 p-3 rounded-md border border-indigo-200">「この人でなければ」という出会いを創出する。</div></div></main>
                 </div>
-
-                <!-- Slide 6: Services -->
+                
                 <div class="slide">
                     <header class="mb-8 text-center"><h1 class="text-4xl font-bold text-gray-800 tracking-tight">4. 提供サービスと価値提案</h1><p class="mt-3 text-lg text-indigo-600 font-semibold">イノベーションの「種」から「果実」までを一気通貫で支援</p></header>
-                    <main class="space-y-10"><div class="grid grid-cols-1 md:grid-cols-2 gap-10"><div class="bg-blue-50 p-6 rounded-xl border-t-4 border-blue-500 shadow-lg"><div class="flex items-center mb-4"><div class="flex-shrink-0 bg-blue-500 text-white h-14 w-14 rounded-lg flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg></div><div class="ml-4"><h2 class="text-2xl font-bold text-gray-800">R&D・用途開発向け</h2><p class="text-blue-600 font-semibold">仮説検証を高速化する</p></div></div><div class="space-y-4"><div><h3 class="font-bold text-gray-700 text-lg">① 用途開発 / 技術マッチング</h3><p class="text-sm text-gray-600 mt-1">自社素材・技術の新たな「出口」となる応用先や、共同開発パートナー候補を探索・提案します。</p></div><div><h3 class="font-bold text-gray-700 text-lg">② スポットコンサルティング</h3><p class="text-sm text-gray-600 mt-1">特定の技術的課題や市場ニーズについて、第一線の専門家との1時間のインタビューをセッティングします。</p></div></div><div class="mt-6 bg-white p-4 rounded-lg border border-blue-200"><h4 class="font-semibold text-gray-700 text-md mb-2">提供価値 (Value)</h4><ul class="list-disc list-inside text-sm text-gray-600 space-y-2"><li>開発期間の短縮と研究開発費のROI向上</li><li>異業種からの新たな着想・ヒントの獲得</li></ul></div></div><div class="bg-green-50 p-6 rounded-xl border-t-4 border-green-500 shadow-lg"><div class="flex items-center mb-4"><div class="flex-shrink-0 bg-green-500 text-white h-14 w-14 rounded-lg flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg></div><div class="ml-4"><h2 class="text-2xl font-bold text-gray-800">戦略調達・ソーシング向け</h2><p class="text-green-600 font-semibold">サプライチェーンを革新する</p></div></div><div class="space-y-4"><div><h3 class="font-bold text-gray-700 text-lg">① 新規サプライヤー探索</h3><p class="text-sm text-gray-600 mt-1">最先端の素材や、コスト削減・BCP対応を実現する代替材料を持つ、優良サプライヤーを特定・紹介します。</p></div><div><h3 class="font-bold text-gray-700 text-lg">② サプライヤー評価支援</h3><p class="text-sm text-gray-600 mt-1">独立した専門家の知見を活用し、候補サプライヤーの技術力や品質管理体制を客観的に評価します。</p></div></div><div class="mt-6 bg-white p-4 rounded-lg border border-green-200"><h4 class="font-semibold text-gray-700 text-md mb-2">提供価値 (Value)</h4><ul class="list-disc list-inside text-sm text-gray-600 space-y-2"><li>調達リードタイムの短縮とコスト削減</li><li>サプライチェーンの強靭化とリスク分散</li></ul></div></div></div><div class="text-center pt-6"><h2 class="text-2xl font-bold text-gray-800 mb-4">我々の独自の価値提案 (UVP)</h2><div class="bg-indigo-50 border-l-4 border-indigo-500 p-6 rounded-r-lg inline-block max-w-4xl"><p class="text-gray-700 text-lg leading-relaxed">我々は「R&D部門の技術的課題」と「調達部門の戦略的課題」を同時に理解し、両部門を繋ぐことで、アイデア創出から量産化までのプロセス全体を加速させる、<span class="font-bold text-indigo-700 bg-indigo-200 px-2 py-1 rounded">産業イノベーションに特化した唯一無二のパートナー</span>です。</p></div></div></main>
+                    <main class="space-y-10"><div class="grid grid-cols-1 md:grid-cols-2 gap-10"><div class="bg-blue-50 p-6 rounded-xl border-t-4 border-blue-500 shadow-lg"><div class="flex items-center mb-4"><div class="shape-icon flex-shrink-0 bg-blue-500 text-white h-14 w-14 rounded-lg"><div class="w-7 h-7 bg-white rounded-full flex items-center justify-center font-bold text-blue-500 text-xl">?</div></div><div class="ml-4"><h2 class="text-2xl font-bold text-gray-800">R&D・用途開発向け</h2><p class="text-blue-600 font-semibold">仮説検証を高速化する</p></div></div><div class="space-y-4"><div><h3 class="font-bold text-gray-700 text-lg">① 用途開発 / 技術マッチング</h3><p class="text-sm text-gray-600 mt-1">自社素材・技術の新たな「出口」となる応用先や、共同開発パートナー候補を探索・提案します。</p></div><div><h3 class="font-bold text-gray-700 text-lg">② スポットコンサルティング</h3><p class="text-sm text-gray-600 mt-1">特定の技術的課題や市場ニーズについて、第一線の専門家との1時間のインタビューをセッティングします。</p></div></div><div class="mt-6 bg-white p-4 rounded-lg border border-blue-200"><h4 class="font-semibold text-gray-700 text-md mb-2">提供価値 (Value)</h4><ul class="list-disc list-inside text-sm text-gray-600 space-y-2"><li>開発期間の短縮と研究開発費のROI向上</li><li>異業種からの新たな着想・ヒントの獲得</li></ul></div></div><div class="bg-green-50 p-6 rounded-xl border-t-4 border-green-500 shadow-lg"><div class="flex items-center mb-4"><div class="shape-icon flex-shrink-0 bg-green-500 text-white h-14 w-14 rounded-lg"><div class="h-7 w-2 bg-white"></div><div class="h-5 w-2 bg-white ml-1"></div><div class="h-8 w-2 bg-white ml-1"></div></div><div class="ml-4"><h2 class="text-2xl font-bold text-gray-800">戦略調達・ソーシング向け</h2><p class="text-green-600 font-semibold">サプライチェーンを革新する</p></div></div><div class="space-y-4"><div><h3 class="font-bold text-gray-700 text-lg">① 新規サプライヤー探索</h3><p class="text-sm text-gray-600 mt-1">最先端の素材や、コスト削減・BCP対応を実現する代替材料を持つ、優良サプライヤーを特定・紹介します。</p></div><div><h3 class="font-bold text-gray-700 text-lg">② サプライヤー評価支援</h3><p class="text-sm text-gray-600 mt-1">独立した専門家の知見を活用し、候補サプライヤーの技術力や品質管理体制を客観的に評価します。</p></div></div><div class="mt-6 bg-white p-4 rounded-lg border border-green-200"><h4 class="font-semibold text-gray-700 text-md mb-2">提供価値 (Value)</h4><ul class="list-disc list-inside text-sm text-gray-600 space-y-2"><li>調達リードタイムの短縮とコスト削減</li><li>サプライチェーンの強靭化とリスク分散</li></ul></div></div></div><div class="text-center pt-6"><h2 class="text-2xl font-bold text-gray-800 mb-4">我々の独自の価値提案 (UVP)</h2><div class="bg-indigo-50 border-l-4 border-indigo-500 p-6 rounded-r-lg inline-block max-w-4xl"><p class="text-gray-700 text-lg leading-relaxed">我々は「R&D部門の技術的課題」と「調達部門の戦略的課題」を同時に理解し、両部門を繋ぐことで、アイデア創出から量産化までのプロセス全体を加速させる、<span class="font-bold text-indigo-700 bg-indigo-200 px-2 py-1 rounded">産業イノベーションに特化した唯一無二のパートナー</span>です。</p></div></div></main>
                 </div>
 
-                <!-- Slide 7: GTM Strategy -->
                 <div class="slide">
-                     <header class="mb-8 text-center"><h1 class="text-4xl font-bold text-gray-800 tracking-tight">5. 市場投入（Go-to-Market）戦略</h1><p class="mt-3 text-lg text-indigo-600 font-semibold">顧客課題を起点とする「マーケットイン」アプローチ</p></header>
-                    <main class="grid grid-cols-1 lg:grid-cols-2 gap-12"><div class="space-y-8"><h2 class="text-2xl font-bold text-gray-800 border-b-2 border-indigo-500 pb-2">6ヶ月間の実行ロードマップ</h2><div class="relative pl-14"><div class="absolute left-0 top-0 flex items-center justify-center w-12 h-12 bg-indigo-500 text-white font-bold rounded-full z-10 text-xl">1</div><div class="ml-4"><p class="font-semibold text-gray-500">Phase 1 (1-2ヶ月目)</p><h3 class="text-xl font-bold text-gray-800 mt-1">仮説検証とトラクション獲得</h3><p class="mt-2 text-gray-600">ターゲット顧客へのヒアリングを通じ、最も解決価値の高い「ペイン」を特定し、仮説を検証する。</p></div></div><div class="relative pl-14"><div class="absolute left-0 top-0 flex items-center justify-center w-12 h-12 bg-indigo-500 text-white font-bold rounded-full z-10 text-xl">2</div><div class="ml-4"><p class="font-semibold text-gray-500">Phase 2 (2-4ヶ月目)</p><h3 class="text-xl font-bold text-gray-800 mt-1">有償トライアルと価値実証</h3><p class="mt-2 text-gray-600">スコープを限定した有償トライアルを実施し、我々の価値（ROI）を実証する。</p></div></div><div class="relative pl-14"><div class="absolute left-0 top-0 flex items-center justify-center w-12 h-12 bg-indigo-500 text-white font-bold rounded-full z-10 text-xl">3</div><div class="ml-4"><p class="font-semibold text-gray-500">Phase 3 (4-6ヶ月目)</p><h3 class="text-xl font-bold text-gray-800 mt-1">本契約転換と横展開</h3><p class="mt-2 text-gray-600">トライアルの成功を基に年間契約へ転換。成功事例をテコに横展開を図る。</p></div></div></div><div class="space-y-8"><div class="bg-gray-50 p-6 rounded-xl border"><h3 class="text-xl font-bold text-gray-800 mb-3 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.657 7.343A8 8 0 0117.657 18.657z" /><path stroke-linecap="round" stroke-linejoin="round" d="M9.879 16.121A3 3 0 1014.12 11.88l-4.242 4.242z" /></svg>基本思想：顧客開発モデル</h3><p class="text-gray-600">「プロダクトありき」ではなく、まず顧客の課題を深く探索・発見し（<span class="font-bold">顧客発見</span>）、その課題を解決できることを実証し（<span class="font-bold">顧客検証</span>）、その上で事業を拡大する。</p></div><div class="bg-amber-50 p-6 rounded-xl border-l-4 border-amber-400"><h3 class="text-xl font-bold text-gray-800 mb-3 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>顧客理解の核：ジョブ理論</h3><p class="text-gray-600 mb-3">顧客は製品を買うのではなく、自身の「ジョブ（片付けたい用事）」を解決するために製品を「雇用」する。</p><div class="space-y-3"><div class="bg-white p-3 rounded-md shadow-sm"><p class="font-semibold text-gray-700">【R&D部門のジョブ】</p><p class="text-gray-600 text-sm">"新製品開発における不確実性を減らし、成功確率を高めたい"</p></div><div class="bg-white p-3 rounded-md shadow-sm"><p class="font-semibold text-gray-700">【調達部門のジョブ】</p><p class="text-gray-600 text-sm">"強靭なサプライヤー網を構築したい"</p></div></div></div></div></main>
-                </div>
-                
-                <!-- Slide 8: Similar Companies from Assets (NEW) -->
-                <div class="slide flex flex-col">
-                    <header class="text-center mb-4">
-                        <h1 class="text-4xl font-bold text-gray-800 tracking-tight">7. 既存アセットからの展開</h1>
-                        <p class="mt-2 text-lg text-indigo-600 font-semibold">成功確率の高い類似企業へのアプローチ</p>
+                    <header class="mb-8 text-center">
+                        <h1 class="text-4xl font-bold text-gray-800 tracking-tight">プロダクトイメージ</h1>
+                        <p class="mt-3 text-lg text-indigo-600 font-semibold">直感的で使いやすいインターフェース（開発中）</p>
                     </header>
-                    <main class="flex-grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
-                        <!-- Category 1: Major Chemicals -->
-                        <div class="bg-gray-50 rounded-lg p-4 border-t-4 border-red-500 flex flex-col">
-                            <h2 class="font-bold text-red-600 mb-2">総合化学メーカー</h2>
-                            <p class="text-xs text-gray-500 mb-3 flex-grow">幅広い事業ポートフォリオを持ち、素材起点の新規事業開発に積極的。</p>
-                            <div class="space-y-3">
-                                <div><p class="text-xs font-semibold text-gray-400">EXISTING ASSET</p><p class="font-semibold text-gray-700">旭化成 / 三井化学</p></div>
-                                <div><p class="text-xs font-semibold text-gray-400">SIMILAR TARGETS</p>
-                                    <ul class="list-disc list-inside space-y-1 mt-1">
-                                        <li><a href="https://www.sumitomo-chem.co.jp/" target="_blank" class="hover:text-indigo-600">住友化学</a></li>
-                                        <li><a href="https://www.mcgc.com/" target="_blank" class="hover:text-indigo-600">三菱ケミカルグループ</a></li>
-                                        <li><a href="https://www.toray.co.jp/" target="_blank" class="hover:text-indigo-600">東レ</a></li>
-                                    </ul>
-                                </div>
+                    <main class="max-w-5xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+                        <div class="w-full md:w-2/3">
+                            <div class="aspect-video bg-gray-200 rounded-lg shadow-lg flex items-center justify-center">
+                                <p class="text-gray-500 font-semibold">ここにプロダクトのスクリーンショットが入ります</p>
                             </div>
                         </div>
-                        <!-- Category 2: Specialty Chemicals -->
-                        <div class="bg-gray-50 rounded-lg p-4 border-t-4 border-blue-500 flex flex-col">
-                            <h2 class="font-bold text-blue-600 mb-2">機能性化学</h2>
-                            <p class="text-xs text-gray-500 mb-3 flex-grow">特定技術に強みを持ち、エレクトロニクスや自動車分野への展開を模索。</p>
-                            <div class="space-y-3">
-                                <div><p class="text-xs font-semibold text-gray-400">EXISTING ASSET</p><p class="font-semibold text-gray-700">綜研化学</p></div>
-                                <div><p class="text-xs font-semibold text-gray-400">SIMILAR TARGETS</p>
-                                    <ul class="list-disc list-inside space-y-1 mt-1">
-                                        <li><a href="https://www.lintec.co.jp/" target="_blank" class="hover:text-indigo-600">リンテック</a></li>
-                                        <li><a href="https://www.adequia.com/" target="_blank" class="hover:text-indigo-600">ADEKA</a></li>
-                                        <li><a href="https://www.kayaku.co.jp/" target="_blank" class="hover:text-indigo-600">日本化薬</a></li>
-                                    </ul>
-                                </div>
+                        <div class="w-full md:w-1/3 space-y-4">
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-indigo-500">
+                                <h3 class="font-bold text-gray-800">高度な検索機能</h3>
+                                <p class="text-sm text-gray-600 mt-1">求める素材の特性や技術要件から、最適な候補を瞬時にリストアップ。</p>
                             </div>
-                        </div>
-                        <!-- Category 3: Advanced Tech -->
-                        <div class="bg-gray-50 rounded-lg p-4 border-t-4 border-purple-500 flex flex-col">
-                            <h2 class="font-bold text-purple-600 mb-2">先端技術 (ナノテク等)</h2>
-                            <p class="text-xs text-gray-500 mb-3 flex-grow">独自性の高い微細加工技術や表面処理技術を他分野へ応用したいニーズ。</p>
-                             <div class="space-y-3">
-                                <div><p class="text-xs font-semibold text-gray-400">EXISTING ASSET</p><p class="font-semibold text-gray-700">NanoFrontier / japanナノコート / Alphetech</p></div>
-                                <div><p class="text-xs font-semibold text-gray-400">SIMILAR TARGETS</p>
-                                    <ul class="list-disc list-inside space-y-1 mt-1">
-                                        <li><a href="https://www.dic-global.com/" target="_blank" class="hover:text-indigo-600">DIC</a></li>
-                                        <li><a href="https://www.jsr.co.jp/" target="_blank" class="hover:text-indigo-600">JSR</a></li>
-                                        <li><a href="https://www.hoya.com/" target="_blank" class="hover:text-indigo-600">HOYA</a></li>
-                                    </ul>
-                                </div>
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-indigo-500">
+                                <h3 class="font-bold text-gray-800">匿名での相談</h3>
+                                <p class="text-sm text-gray-600 mt-1">機密情報を守りながら、複数の企業や専門家に課題を打診可能。</p>
                             </div>
-                        </div>
-                        <!-- Category 4: Specialized Trading & Analysis -->
-                        <div class="bg-gray-50 rounded-lg p-4 border-t-4 border-green-500 flex flex-col">
-                            <h2 class="font-bold text-green-600 mb-2">専門商社・分析</h2>
-                            <p class="text-xs text-gray-500 mb-3 flex-grow">幅広い顧客網と深い業界知識を活かし、新たなソリューションを提案したい。</p>
-                            <div class="space-y-3">
-                                <div><p class="text-xs font-semibold text-gray-400">EXISTING ASSET</p><p class="font-semibold text-gray-700">カナラボ / アンプラットティーカトー</p></div>
-                                <div><p class="text-xs font-semibold text-gray-400">SIMILAR TARGETS</p>
-                                    <ul class="list-disc list-inside space-y-1 mt-1">
-                                        <li><a href="https://www.nagase.co.jp/" target="_blank" class="hover:text-indigo-600">長瀬産業</a></li>
-                                        <li><a href="https://www.inabata.co.jp/" target="_blank" class="hover:text-indigo-600">稲畑産業</a></li>
-                                        <li><a href="https://www.jeol.co.jp/" target="_blank" class="hover:text-indigo-600">日本電子 (JEOL)</a></li>
-                                    </ul>
-                                </div>
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-indigo-500">
+                                <h3 class="font-bold text-gray-800">プロジェクト管理</h3>
+                                <p class="text-sm text-gray-600 mt-1">NDA締結から共同開発まで、進捗をプラットフォーム上で一元管理。</p>
                             </div>
                         </div>
                     </main>
                 </div>
 
-                <!-- Slide 9: Target Strategy (was 8) -->
-                <div class="slide flex flex-col">
-                    <header class="text-center mb-4"><h1 class="text-4xl font-bold text-gray-800 tracking-tight">8. 初期ターゲット戦略</h1><p class="mt-2 text-lg text-indigo-600 font-semibold">企業規模別のターゲットとアプローチ仮説</p></header>
-                    <main class="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4">
-                        
-                        <!-- Enterprise -->
-                        <div class="bg-gray-50 rounded-xl p-4 flex flex-col border-t-4 border-blue-600">
-                            <h2 class="text-2xl font-bold text-blue-600 text-center">エンタープライズ</h2>
-                            <p class="text-center text-xs text-gray-500 font-semibold mb-3">業界リーダー / 大規模R&D</p>
-                            <p class="text-xs text-gray-600 mb-4 flex-grow">巨額のR&D予算を持つが、組織のサイロ化や意思決定の遅さが課題。部門横断的なテーマや、既存のサプライヤー網では解決できない革新的なテーマで価値を発揮。</p>
-                            <ul class="space-y-2 text-sm">
-                                <li><a href="https://global.toyota/" target="_blank" class="font-semibold text-gray-800 hover:text-indigo-600">トヨタ自動車株式会社</a><p class="text-xs text-gray-500">全固体電池、水素技術、軽量複合材</p></li>
-                                <li><a href="https://www.sony.com/" target="_blank" class="font-semibold text-gray-800 hover:text-indigo-600">ソニーグループ株式会社</a><p class="text-xs text-gray-500">イメージセンサー向け新材料、VR/AR用光学材料</p></li>
-                                <li><a href="https://holdings.panasonic/" target="_blank" class="font-semibold text-gray-800 hover:text-indigo-600">パナソニックHD</a><p class="text-xs text-gray-500">次世代電池材料、環境配慮型プラスチック</p></li>
-                                <li><a href="https://www.murata.com/" target="_blank" class="font-semibold text-gray-800 hover:text-indigo-600">株式会社村田製作所</a><p class="text-xs text-gray-500">積層セラミックコンデンサ、5G/6G向け高周波材料</p></li>
-                                <li><a href="https://www.takeda.com/" target="_blank" class="font-semibold text-gray-800 hover:text-indigo-600">武田薬品工業株式会社</a><p class="text-xs text-gray-500">ドラッグデリバリーシステム、再生医療向け材料</p></li>
+                <div class="slide">
+                    <header class="mb-10 text-center">
+                        <h1 class="text-4xl font-bold text-gray-800 tracking-tight">料金プラン</h1>
+                        <p class="mt-3 text-lg text-indigo-600 font-semibold">お客様のニーズに合わせた成果志向の料金体系</p>
+                    </header>
+                    <main class="max-w-6xl mx-auto space-y-8">
+                        <div class="bg-gray-50 rounded-xl shadow-md p-6 border text-center max-w-2xl mx-auto">
+                            <h2 class="text-2xl font-bold text-gray-800">無料登録</h2>
+                            <p class="text-gray-500 mt-1 mb-4">まずは情報を受け取れる状態に。費用は一切かかりません。</p>
+                            <ul class="space-y-2 text-gray-600 text-left inline-block">
+                                <li class="flex items-center"><span class="text-green-500 mr-2 font-bold">✓</span> 企業情報・技術シーズの登録</li>
+                                <li class="flex items-center"><span class="text-green-500 mr-2 font-bold">✓</span> マッチング依頼のメール通知</li>
+                                <li class="flex items-center"><span class="text-red-500 mr-2 font-bold">✕</span> プラットフォームの閲覧・検索</li>
+                                <li class="flex items-center"><span class="text-red-500 mr-2 font-bold">✕</span> マッチング依頼への返信・商談</li>
                             </ul>
+                            <p class="text-xs text-gray-500 mt-4">※プラットフォームの全機能を利用するには、下記有料プランへのご契約が必要です。</p>
                         </div>
-
-                        <!-- SMB -->
-                        <div class="bg-gray-50 rounded-xl p-4 flex flex-col border-t-4 border-green-600">
-                            <h2 class="text-2xl font-bold text-green-600 text-center">SMB</h2>
-                            <p class="text-center text-xs text-gray-500 font-semibold mb-3">特定分野のトップ企業</p>
-                            <p class="text-xs text-gray-600 mb-4 flex-grow">特定市場で高い技術力とシェアを誇るが、R&Dリソースは限定的。外部の専門知識を活用した開発のスピードアップに強いニーズを持つ。</p>
-                            <ul class="space-y-2 text-sm">
-                                <li><a href="https://www.hamamatsu.com/" target="_blank" class="font-semibold text-gray-800 hover:text-indigo-600">浜松ホトニクス株式会社</a><p class="text-xs text-gray-500">光半導体、センサー向け特殊光学材料</p></li>
-                                <li><a href="https://www.horiba.com/" target="_blank" class="font-semibold text-gray-800 hover:text-indigo-600">株式会社堀場製作所</a><p class="text-xs text-gray-500">分析・計測機器向け高感度センサー材料</p></li>
-                                <li><a href="https://www.shimano.com/" target="_blank" class="font-semibold text-gray-800 hover:text-indigo-600">株式会社シマノ</a><p class="text-xs text-gray-500">自転車部品向け軽量・高強度カーボン複合材</p></li>
-                                <li><a href="https://www.nissin.com/" target="_blank" class="font-semibold text-gray-800 hover:text-indigo-600">日清食品ホールディングス</a><p class="text-xs text-gray-500">機能性食品素材、サステナブル包材</p></li>
-                                <li><a href="https://www.rolanddg.com/" target="_blank" class="font-semibold text-gray-800 hover:text-indigo-600">ローランドDG株式会社</a><p class="text-xs text-gray-500">3Dプリンター、切削加工機向け特殊樹脂</p></li>
-                            </ul>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col border-t-4 border-indigo-500">
+                                <h2 class="text-3xl font-bold text-indigo-600 text-center">サプライヤー企業</h2>
+                                <p class="text-center text-gray-500 mt-1 mb-6">（シーズ提供側）</p>
+                                <div class="mb-6 flex-grow">
+                                    <h3 class="text-xl font-semibold text-gray-700">基本料金</h3>
+                                    <p class="text-4xl font-bold my-2">XX<span class="text-xl">万円/年</span></p>
+                                    <p class="text-sm text-gray-600">プラットフォーム利用、シーズ登録・公開、スカウト受信など</p>
+                                </div>
+                                <hr class="my-6">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-700">商談マッチングフィー</h3>
+                                    <p class="text-4xl font-bold my-2">Y<span class="text-xl">万円/件</span></p>
+                                    <p class="text-sm text-gray-600">デマンド企業との商談が1件成立するごとにかかる費用です。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col border-t-4 border-teal-500">
+                                <h2 class="text-3xl font-bold text-teal-600 text-center">デマンド企業</h2>
+                                <p class="text-center text-gray-500 mt-1 mb-6">（ニーズ探索側）</p>
+                                <div class="mb-6 flex-grow">
+                                    <h3 class="text-xl font-semibold text-gray-700">基本料金</h3>
+                                    <p class="text-4xl font-bold my-2">XX<span class="text-xl">万円/年</span></p>
+                                    <p class="text-sm text-gray-600">プラットフォーム検索、ニーズ登録・公開、スカウト送信など</p>
+                                </div>
+                                <hr class="my-6">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-700">商談マッチングフィー</h3>
+                                    <p class="text-4xl font-bold my-2">Y<span class="text-xl">万円/件</span></p>
+                                    <p class="text-sm text-gray-600">サプライヤー企業との商談が1件成立するごとにかかる費用です。</p>
+                                </div>
+                            </div>
                         </div>
-
-                        <!-- Startups -->
-                        <div class="bg-gray-50 rounded-xl p-4 flex flex-col border-t-4 border-purple-600">
-                            <h2 class="text-2xl font-bold text-purple-600 text-center">スタートアップ</h2>
-                            <p class="text-center text-xs text-gray-500 font-semibold mb-3">革新的技術シーズ</p>
-                            <p class="text-xs text-gray-600 mb-4 flex-grow">破壊的技術を持つが、量産化やサプライチェーン構築に課題。最適な素材パートナーを見つけることが事業成長のボトルネックとなっている。</p>
-                            <ul class="space-y-2 text-sm">
-                                <li><a href="https://spiber.inc/" target="_blank" class="font-semibold text-gray-800 hover:text-indigo-600">Spiber株式会社</a><p class="text-xs text-gray-500">構造タンパク質素材の量産技術、用途開拓</p></li>
-                                <li><a href="https://tb-m.com/" target="_blank" class="font-semibold text-gray-800 hover:text-indigo-600">株式会社TBM</a><p class="text-xs text-gray-500">石灰石由来の新素材LIMEXの成形技術</p></li>
-                                <li><a href="https://www.mujin.co.jp/" target="_blank" class="font-semibold text-gray-800 hover:text-indigo-600">株式会社Mujin</a><p class="text-xs text-gray-500">ロボットアーム向け軽量・高剛性材料</p></li>
-                                <li><a href="https://en.skydrive2020.com/" target="_blank" class="font-semibold text-gray-800 hover:text-indigo-600">株式会社SkyDrive</a><p class="text-xs text-gray-500">「空飛ぶクルマ」向け軽量複合材、バッテリー</p></li>
-                                <li><a href="https://tx-inc.com/" target="_blank" class="font-semibold text-gray-800 hover:text-indigo-600">テレイグジスタンス株式会社</a><p class="text-xs text-gray-500">ロボットハンド向け高耐久・高触覚素材</p></li>
-                            </ul>
-                        </div>
+                        <div class="text-center text-sm text-gray-500 pt-4">※詳細な料金プラン、エンタープライズ向けのカスタマイズについては別途お問い合わせください。</div>
                     </main>
                 </div>
 
-                <!-- Slide 10: Asset Hearing (was 9) -->
-                <div class="slide flex flex-col">
-                    <header class="mb-6 text-center"><h1 class="text-3xl sm:text-4xl font-bold text-gray-800 tracking-tight">9. 我々の競争優位の源泉</h1><p class="mt-3 text-lg sm:text-xl text-indigo-600 font-semibold">貴社が持つ独自の「アセット」を棚卸しする</p></header>
-                    <div class="text-center mb-8 max-w-4xl mx-auto"><p class="text-gray-600 leading-relaxed text-sm sm:text-base">この事業の成功確率を最大化するため、貴社が持つ独自の強みや資産（アセット）を明確にし、戦略に組み込むためのディスカッションを行います。当たり前だと思っていることの中にこそ、他社にはない「お宝」が眠っているかもしれません。</p></div>
-                    <main class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-grow"><div class="bg-gray-50 p-6 rounded-xl border-l-4 border-green-500 flex flex-col"><div class="flex items-center mb-4"><div class="flex-shrink-0 bg-green-100 text-green-600 h-12 w-12 rounded-lg flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656-.126-1.283-.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg></div><h2 class="ml-4 text-xl font-bold text-gray-800">顧客・市場アセット</h2></div><div class="space-y-3 flex-grow"><p class="font-semibold text-gray-700 text-sm">【ディスカッションテーマ】</p><ul class="list-disc list-inside text-gray-600 space-y-2 text-sm"><li>この事業で連携・協業できそうな既存顧客や販路は？</li><li>業界内で長年培ってきた信頼やブランドイメージは？</li><li>顧客から直接得られる、市場の生きた情報は？</li></ul></div></div><div class="bg-gray-50 p-6 rounded-xl border-l-4 border-purple-500 flex flex-col"><div class="flex items-center mb-4"><div class="flex-shrink-0 bg-purple-100 text-purple-600 h-12 w-12 rounded-lg flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" /></svg></div><h2 class="ml-4 text-xl font-bold text-gray-800">人材・組織アセット</h2></div><div class="space-y-3 flex-grow"><p class="font-semibold text-gray-700 text-sm">【ディスカッションテーマ】</p><ul class="list-disc list-inside text-gray-600 space-y-2 text-sm"><li>「この人に聞けばわかる」という社内のキーパーソンは？</li><li>他社にはない、独自の組織文化や意思決定プロセスは？</li><li>協力が得られそうな関連部署やグループ会社は？</li></ul></div></div><div class="bg-gray-50 p-6 rounded-xl border-l-4 border-amber-500 flex flex-col md:col-span-2"><div class="flex items-center mb-4"><div class="flex-shrink-0 bg-amber-100 text-amber-600 h-12 w-12 rounded-lg flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2H15a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.707 4.293l.586-.586a2 2 0 012.828 0l2.122 2.121a2 2 0 010 2.828l-2.475 2.475a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828zM15 12a2 2 0 012 2v3.055a2 2 0 01-2 2H9a2 2 0 01-2-2V14a2 2 0 012-2h6z" /></svg></div><h2 class="ml-4 text-xl font-bold text-gray-800">パートナーアセット</h2></div><div class="space-y-3 flex-grow"><p class="font-semibold text-gray-700 text-sm">【ディスカッションテーマ】</p><ul class="list-disc list-inside text-gray-600 space-y-2 text-sm"><li>アカデミア（大学・研究機関）との繋がりは？</li><li>長年の取引がある、信頼できるサプライヤーや協力会社は？</li><li>業界団体やコンソーシアムでのネットワークは？</li></ul></div></div></main>
-                </div>
-                
-                <!-- Slide 11: Schedule (was 10) -->
-                <div class="slide flex flex-col">
-                    <header class="mb-6 text-center"><h1 class="text-3xl sm:text-4xl font-bold text-gray-800 tracking-tight">10. スケジュール</h1><p class="mt-2 text-lg sm:text-xl text-indigo-600 font-semibold">6ヶ月で事業を軌道に乗せるためのロードマップ</p></header>
-                    <main class="flex-grow grid grid-cols-3 gap-6"><div class="bg-indigo-50 rounded-xl border-t-4 border-indigo-500 flex flex-col p-5 shadow-lg"><div class="text-center mb-4"><h2 class="text-xl font-bold text-indigo-600">Phase 1：基盤構築</h2><p class="font-semibold text-gray-500 text-sm">1〜2ヶ月目</p></div><div class="flex-grow"><p class="text-gray-600 mb-4 text-xs leading-relaxed">事業が成り立つかの見極めと、最初の商談創出に全力を注ぐフェーズ。</p><ul class="list-disc list-inside text-gray-700 space-y-2 text-xs"><li>アセットヒアリングの実施</li><li>ターゲットリスト確定とアプローチ開始</li><li>初期商談での課題の深掘り</li><li>有償トライアルプログラムの具体化</li></ul></div><div class="mt-4 bg-white rounded-lg p-3 text-center border border-indigo-200"><p class="text-xs font-semibold text-gray-500">達成目標</p><p class="font-bold text-indigo-700 text-lg">初期商談 5〜7件</p></div></div><div class="bg-blue-50 rounded-xl border-t-4 border-blue-500 flex flex-col p-5 shadow-lg"><div class="text-center mb-4"><h2 class="text-xl font-bold text-blue-600">Phase 2：価値実証</h2><p class="font-semibold text-gray-500 text-sm">3〜4ヶ月目</p></div><div class="flex-grow"><p class="text-gray-600 mb-4 text-xs leading-relaxed">有償トライアルを通じて我々の価値を具体的に証明し、本契約への流れを構築するフェーズ。</p><ul class="list-disc list-inside text-gray-700 space-y-2 text-xs"><li>有償トライアルの契約獲得</li><li>トライアル実行と成功事例の創出</li><li>本契約に向けたROIの算出</li></ul></div><div class="mt-4 bg-white rounded-lg p-3 text-center border border-blue-200"><p class="text-xs font-semibold text-gray-500">達成目標</p><p class="font-bold text-blue-700 text-lg">有償トライアル 3件</p></div></div><div class="bg-green-50 rounded-xl border-t-4 border-green-500 flex flex-col p-5 shadow-lg"><div class="text-center mb-4"><h2 class="text-xl font-bold text-green-600">Phase 3：収益化</h2><p class="font-semibold text-gray-500 text-sm">5〜6ヶ月目</p></div><div class="flex-grow"><p class="text-gray-600 mb-4 text-xs leading-relaxed">トライアルの成功を本契約に繋げ、再現性のあるセールスモデルを確立するフェーズ。</p><ul class="list-disc list-inside text-gray-700 space-y-2 text-xs"><li>本契約への転換</li><li>成功事例を基にした新規開拓の本格化</li><li>経営層への最終報告と提言</li></ul></div><div class="mt-4 bg-white rounded-lg p-3 text-center border border-green-200"><p class="text-xs font-semibold text-gray-500">達成目標</p><p class="font-bold text-green-700 text-lg">本契約 2〜3件</p></div></div></main>
+                <div class="slide flex flex-col items-center justify-center text-center bg-indigo-600 text-white !p-8">
+                    <div class="w-full max-w-4xl">
+                        <h1 class="text-4xl md:text-5xl font-bold tracking-tight">未来のものづくりを、<br>共に創造しませんか？</h1>
+                        <p class="mt-6 text-xl md:text-2xl text-indigo-200">貴社の素材や技術が持つ、まだ見ぬ可能性を最大限に引き出すお手伝いをします。<br>まずはお気軽にご相談ください。</p>
+                        <div class="mt-12">
+                            <a href="#" class="bg-white text-indigo-600 font-bold py-4 px-8 rounded-full text-lg hover:bg-gray-200 transition-colors shadow-lg">お問い合わせはこちら</a>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
 
-        <!-- Navigation -->
         <div id="navigation-controls" class="flex items-center justify-center mt-4 space-x-4">
             <button id="prev-btn" class="bg-white p-3 rounded-full shadow-md hover:bg-gray-200 transition disabled:opacity-50 disabled:cursor-not-allowed">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+                <div class="w-2 h-2 border-l-2 border-b-2 border-gray-600 transform rotate-45"></div>
             </button>
             <div id="slide-counter" class="text-gray-600 font-semibold text-lg">1 / 11</div>
             <button id="next-btn" class="bg-white p-3 rounded-full shadow-md hover:bg-gray-200 transition disabled:opacity-50 disabled:cursor-not-allowed">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                <div class="w-2 h-2 border-r-2 border-b-2 border-gray-600 transform -rotate-45"></div>
             </button>
-             <!-- PDF Download Button -->
             <button id="download-pdf-btn" class="bg-indigo-600 text-white px-4 py-3 rounded-full shadow-md hover:bg-indigo-700 transition flex items-center space-x-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
+                <div class="w-4 h-4 relative"><div class="absolute bottom-0 left-0 w-full h-px bg-white"></div><div class="absolute left-1/2 top-0 h-3 w-px bg-white"></div><div class="absolute left-1/2 top-full w-2 h-2 -mt-2 -ml-1 border-r-2 border-b-2 border-white transform -rotate-45 translate-y-2"></div></div>
                 <span>PDFダウンロード</span>
             </button>
         </div>
@@ -299,39 +313,32 @@
                 }
             });
 
-            // PDF Download Logic
             downloadPdfBtn.addEventListener('click', () => {
                 const originalTrack = document.getElementById('slide-track');
                 const slidesToPrint = Array.from(originalTrack.children);
                 
-                // Create a container for printing
                 const printContainer = document.createElement('div');
                 
-                // Clone each slide and append to the container
                 slidesToPrint.forEach(slideNode => {
                     const clone = slideNode.cloneNode(true);
-                    // Style for printing
-                    clone.style.width = '1280px'; // A fixed width for consistent PDF output
-                    clone.style.height = '720px'; // 16:9 aspect ratio
+                    clone.style.width = '1280px';
+                    clone.style.height = '720px';
                     clone.style.overflow = 'hidden';
-                    clone.style.pageBreakAfter = 'always'; // Each slide on a new page
+                    clone.style.pageBreakAfter = 'always';
                     printContainer.appendChild(clone);
                 });
 
-                // Hide the original presentation and show the print container
                 document.body.appendChild(printContainer);
                 
                 const opt = {
                     margin:       0,
-                    filename:     '事業開発プレゼンテーション.pdf',
+                    filename:     '素材用途開発プラットフォーム_ご提案資料.pdf',
                     image:        { type: 'jpeg', quality: 0.98 },
-                    html2canvas:  { scale: 2, useCORS: true, logging: false }, // suppress logs
+                    html2canvas:  { scale: 2, useCORS: true, logging: false },
                     jsPDF:        { unit: 'in', format: 'letter', orientation: 'landscape' }
                 };
 
-                // Generate PDF
                 html2pdf().from(printContainer).set(opt).save().then(() => {
-                    // Clean up after saving
                     document.body.removeChild(printContainer);
                 });
             });
@@ -342,3 +349,4 @@
 
 </body>
 </html>
+
