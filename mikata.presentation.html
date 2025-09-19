@@ -6,7 +6,10 @@
     <title>catapult ご紹介資料</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- Export Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
     <style>
         body {
             font-family: 'Inter', 'Noto Sans JP', sans-serif;
@@ -25,6 +28,7 @@
             border-radius: 1rem;
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
             position: relative;
+            background-color: #f0f0f0;
         }
         #slide-track {
             display: flex;
@@ -38,12 +42,31 @@
             background-color: white;
             overflow-y: auto;
             padding: 2.5rem 3.5rem;
+            box-sizing: border-box;
         }
         .slide::-webkit-scrollbar { width: 8px; }
         .slide::-webkit-scrollbar-track { background: #f1f1f1; }
         .slide::-webkit-scrollbar-thumb { background: #a8a8a8; border-radius: 4px; }
         .slide::-webkit-scrollbar-thumb:hover { background: #7b7b7b; }
         .shape-icon { display: flex; align-items: center; justify-content: center; }
+
+        /* Styles for the off-screen container used for exporting */
+        #export-container {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            opacity: 0;
+            z-index: -100;
+        }
+        .slide-for-export {
+            width: 1280px !important;
+            height: 720px !important;
+            overflow: hidden !important; /* Change to hidden to avoid scrollbars in render */
+            display: block !important;
+            background-color: white;
+            padding: 40px 56px !important; /* 2.5rem & 3.5rem at 16px base font */
+            box-sizing: border-box !important;
+        }
     </style>
 </head>
 <body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
@@ -52,6 +75,7 @@
         <div id="slide-window">
             <div id="slide-track">
 
+                <!-- Slide 1: Title -->
                 <div class="slide flex flex-col items-center justify-center text-center bg-gray-800 text-white !p-8">
                     <div class="w-full max-w-4xl">
                         <p class="text-xl md:text-2xl text-indigo-300 font-semibold">素材ポテンシャルを、適切なパートナーへ。</p>
@@ -62,6 +86,7 @@
                     </div>
                 </div>
 
+                <!-- Slide 2: Company Overview -->
                 <div class="slide">
                     <header class="mb-6 text-center"><h1 class="text-4xl font-bold text-gray-800 tracking-tight">会社概要</h1></header>
                     <main class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
@@ -79,22 +104,17 @@
                             <div class="grid grid-cols-3 gap-y-4">
                                 <div class="col-span-1 font-bold text-gray-600">会社名</div>
                                 <div class="col-span-2 text-gray-800">株式会社Co-Labo Maker</div>
-
                                 <div class="col-span-1 font-bold text-gray-600">設立</div>
                                 <div class="col-span-2 text-gray-800">2017年4月7日</div>
-
                                 <div class="col-span-1 font-bold text-gray-600">代表者</div>
                                 <div class="col-span-2 text-gray-800">代表取締役 古谷優貴</div>
-
                                 <div class="col-span-1 font-bold text-gray-600">所在地</div>
                                 <div class="col-span-2 text-gray-800 text-sm">
                                     <p><span class="font-semibold">【本社】</span> 〒980-0803 宮城県仙台市青葉区国分町1丁目4-9 enspace</p>
                                     <p class="mt-1"><span class="font-semibold">【東京オフィス】</span> 〒136-0082 東京都江東区新木場1-18-6 ライフサイエンスハブ新木場7F office10</p>
                                 </div>
-
                                 <div class="col-span-1 font-bold text-gray-600">事業内容</div>
                                 <div class="col-span-2 text-gray-800">実験機器・設備および技術のシェアリングプラットフォーム「Co-LABO MAKER」の企画・開発・運営</div>
-                                
                                 <div class="col-span-1 font-bold text-gray-600">URL</div>
                                 <div class="col-span-2 text-indigo-600 hover:underline"><a href="https://co-labo-maker.com/" target="_blank" rel="noopener noreferrer">https://co-labo-maker.com/</a></div>
                             </div>
@@ -102,6 +122,7 @@
                     </main>
                 </div>
 
+                <!-- Slide 3: Business Performance -->
                 <div class="slide bg-gray-50">
                     <header class="mb-6 text-center">
                         <h1 class="text-4xl font-bold text-gray-800 tracking-tight">Co-Labo Maker 事業実績</h1>
@@ -140,7 +161,7 @@
                         </div>
                     </main>
                 </div>
-
+                
                 <div class="slide">
                     <header class="mb-8 text-center"><h1 class="text-4xl font-bold text-gray-800 tracking-tight">1. 事業概要とミッション</h1></header>
                     <main class="grid grid-cols-1 md:grid-cols-2 gap-12"><div class="space-y-10"><div><h2 class="text-2xl font-bold text-gray-800 border-b-2 border-indigo-500 pb-2 mb-4 flex items-center"><div class="shape-icon w-6 h-6 mr-3"><div class="w-5 h-5 bg-indigo-200 rounded-full flex items-center justify-center"><div class="w-2 h-2 bg-indigo-500 rounded-full"></div></div></div>事業のビジョン</h2><p class="text-gray-600 leading-relaxed text-lg">あらゆる素材・技術のポテンシャルを最大化し、日本のものづくりにおけるオープンイノベーションを加速させる。</p></div><div><h2 class="text-2xl font-bold text-gray-800 border-b-2 border-indigo-500 pb-2 mb-4 flex items-center"><div class="shape-icon w-6 h-6 mr-3 text-red-500 font-bold text-2xl">!</div>解決する課題</h2><ul class="list-disc list-inside text-gray-600 space-y-3 text-lg"><li>自社の素材・技術の新たな用途が見つからない。</li><li>開発課題に最適な素材や技術を効率的に探せない。</li><li>クローズドな業界構造により、新規サプライヤーの開拓が困難。</li></ul></div></div><div class="flex flex-col items-center justify-center bg-gray-50 rounded-xl p-6"><h3 class="text-xl font-semibold text-gray-700 mb-6">ビジネスモデル</h3><div class="w-full flex items-center justify-between space-x-4"><div class="text-center w-1/3"><div class="shape-icon w-16 h-16 mx-auto mb-2"><div class="w-8 h-8 rounded-full bg-blue-300 relative"><div class="absolute w-4 h-10 bg-blue-300 rounded-t-md top-[-30px] left-1/2 -translate-x-1/2"></div></div></div><p class="mt-2 font-semibold text-gray-700">用途開発 /<br>素材研究部門</p></div><div class="flex-grow flex flex-col items-center"><div class="w-24 text-center my-2 px-3 py-1 bg-indigo-500 text-white rounded-full font-bold shadow">MATCH</div></div><div class="text-center w-1/3"><div class="shape-icon w-16 h-16 mx-auto mb-2"><div class="w-12 h-10 bg-green-300 flex items-end"><div class="w-3 h-6 bg-green-500 ml-1"></div><div class="w-3 h-8 bg-green-500 ml-1"></div><div class="w-3 h-4 bg-green-500 ml-1"></div></div></div><p class="mt-2 font-semibold text-gray-700">素材メーカー /<br>調達部門</p></div></div><div class="mt-8 text-center text-gray-600 bg-indigo-50 border-l-4 border-indigo-400 p-4 rounded-r-lg"><span class="font-bold">提供価値:</span> 専門家の知見も活用し、質の高いマッチングと課題解決をスピーディーに実現。</div></div></main>
@@ -273,7 +294,7 @@
             </div>
         </div>
 
-        <div id="navigation-controls" class="flex items-center justify-center mt-4 space-x-4">
+        <div id="navigation-controls" class="flex items-center justify-center mt-4 space-x-2 md:space-x-4">
             <button id="prev-btn" class="bg-white p-3 rounded-full shadow-md hover:bg-gray-200 transition disabled:opacity-50 disabled:cursor-not-allowed">
                 <div class="w-2 h-2 border-l-2 border-b-2 border-gray-600 transform rotate-45"></div>
             </button>
@@ -281,26 +302,36 @@
             <button id="next-btn" class="bg-white p-3 rounded-full shadow-md hover:bg-gray-200 transition disabled:opacity-50 disabled:cursor-not-allowed">
                 <div class="w-2 h-2 border-r-2 border-b-2 border-gray-600 transform -rotate-45"></div>
             </button>
-            <button id="download-pdf-btn" class="bg-indigo-600 text-white px-4 py-3 rounded-full shadow-md hover:bg-indigo-700 transition flex items-center space-x-2">
-                <div class="w-4 h-4 relative"><div class="absolute bottom-0 left-0 w-full h-px bg-white"></div><div class="absolute left-1/2 top-0 h-3 w-px bg-white"></div><div class="absolute left-1/2 top-full w-2 h-2 -mt-2 -ml-1 border-r-2 border-b-2 border-white transform -rotate-45 translate-y-2"></div></div>
+            <div class="w-px h-8 bg-gray-300 mx-2"></div>
+            <button id="download-pdf-btn" class="bg-white text-gray-700 px-4 py-3 rounded-full shadow-md hover:bg-gray-100 transition flex items-center justify-center space-x-2 text-sm w-32">
                 <span>PDFダウンロード</span>
+            </button>
+             <button id="download-pptx-btn" class="bg-white text-gray-700 px-4 py-3 rounded-full shadow-md hover:bg-gray-100 transition flex items-center justify-center space-x-2 text-sm w-32">
+                <span>PPTXダウンロード</span>
             </button>
         </div>
     </div>
+    
+    <div id="export-container"></div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Use jsPDF from window object
+            const { jsPDF } = window.jspdf;
+
             const slideTrack = document.getElementById('slide-track');
             const slides = Array.from(slideTrack.children);
             const nextButton = document.getElementById('next-btn');
             const prevButton = document.getElementById('prev-btn');
             const slideCounter = document.getElementById('slide-counter');
             const downloadPdfBtn = document.getElementById('download-pdf-btn');
+            const downloadPptxBtn = document.getElementById('download-pptx-btn');
+            const exportContainer = document.getElementById('export-container');
             const slideCount = slides.length;
             let currentSlide = 0;
 
             const updateSlidePosition = () => {
-                slideTrack.style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+                slideTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
                 slideCounter.textContent = `${currentSlide + 1} / ${slideCount}`;
                 updateNavButtons();
             };
@@ -308,6 +339,28 @@
             const updateNavButtons = () => {
                 prevButton.disabled = currentSlide === 0;
                 nextButton.disabled = currentSlide === slideCount - 1;
+            };
+
+            const setLoadingState = (btn, isLoading) => {
+                const originalText = btn.id === 'download-pdf-btn' ? 'PDFダウンロード' : 'PPTXダウンロード';
+                if (isLoading) {
+                    btn.disabled = true;
+                    btn.innerHTML = `<div class="w-4 h-4 border-2 border-t-transparent border-gray-500 rounded-full animate-spin"></div><span>作成中</span>`;
+                    downloadPdfBtn.disabled = true;
+                    downloadPptxBtn.disabled = true;
+                } else {
+                    btn.disabled = false;
+                    btn.innerHTML = `<span>${originalText}</span>`;
+                    downloadPdfBtn.disabled = false;
+                    downloadPptxBtn.disabled = false;
+                }
+            };
+            
+            const prepareSlideForExport = (slideNode) => {
+                const clone = slideNode.cloneNode(true);
+                clone.classList.remove('slide');
+                clone.classList.add('slide-for-export');
+                return clone;
             };
 
             nextButton.addEventListener('click', () => {
@@ -325,41 +378,86 @@
             });
             
             document.addEventListener('keydown', e => {
-                if (e.key === 'ArrowRight') {
-                    nextButton.click();
-                } else if (e.key === 'ArrowLeft') {
-                    prevButton.click();
+                if (e.key === 'ArrowRight') nextButton.click();
+                else if (e.key === 'ArrowLeft') prevButton.click();
+            });
+
+            // Revised PDF Download Logic
+            downloadPdfBtn.addEventListener('click', async () => {
+                setLoadingState(downloadPdfBtn, true);
+                try {
+                    const doc = new jsPDF({
+                        orientation: 'landscape',
+                        unit: 'px',
+                        format: [1280, 720]
+                    });
+
+                    for (let i = 0; i < slides.length; i++) {
+                        const slide = slides[i];
+                        const exportSlide = prepareSlideForExport(slide);
+                        exportContainer.appendChild(exportSlide);
+
+                        const canvas = await html2canvas(exportSlide, {
+                            scale: 2, // Higher scale for better quality
+                            useCORS: true,
+                            logging: false,
+                            width: 1280,
+                            height: 720
+                        });
+                        
+                        exportContainer.removeChild(exportSlide);
+
+                        const imgData = canvas.toDataURL('image/jpeg', 0.98);
+                        if (i > 0) {
+                            doc.addPage([1280, 720], 'landscape');
+                        }
+                        doc.addImage(imgData, 'JPEG', 0, 0, 1280, 720);
+                    }
+                    doc.save('catapult_ご紹介資料.pdf');
+                } catch (err) {
+                    console.error("PDF generation failed:", err);
+                    alert("PDFの生成中にエラーが発生しました。");
+                } finally {
+                    setLoadingState(downloadPdfBtn, false);
+                    exportContainer.innerHTML = '';
                 }
             });
 
-            downloadPdfBtn.addEventListener('click', () => {
-                const originalTrack = document.getElementById('slide-track');
-                const slidesToPrint = Array.from(originalTrack.children);
-                
-                const printContainer = document.createElement('div');
-                
-                slidesToPrint.forEach(slideNode => {
-                    const clone = slideNode.cloneNode(true);
-                    clone.style.width = '1280px';
-                    clone.style.height = '720px';
-                    clone.style.overflow = 'hidden';
-                    clone.style.pageBreakAfter = 'always';
-                    printContainer.appendChild(clone);
-                });
 
-                document.body.appendChild(printContainer);
-                
-                const opt = {
-                    margin:       0,
-                    filename:     'catapult_ご紹介資料.pdf',
-                    image:        { type: 'jpeg', quality: 0.98 },
-                    html2canvas:  { scale: 2, useCORS: true, logging: false },
-                    jsPDF:        { unit: 'in', format: 'letter', orientation: 'landscape' }
-                };
+            // Revised PowerPoint Download Logic
+            downloadPptxBtn.addEventListener('click', async () => {
+                setLoadingState(downloadPptxBtn, true);
+                try {
+                    const pptx = new PptxGenJS();
+                    pptx.layout = 'LAYOUT_16x9';
 
-                html2pdf().from(printContainer).set(opt).save().then(() => {
-                    document.body.removeChild(printContainer);
-                });
+                    for (const slideEl of slides) {
+                        const exportSlide = prepareSlideForExport(slideEl);
+                        exportContainer.appendChild(exportSlide);
+                        
+                        const canvas = await html2canvas(exportSlide, {
+                            scale: 2, // Use a higher scale for quality
+                            useCORS: true,
+                            logging: false,
+                            width: 1280, // Explicitly set width
+                            height: 720  // Explicitly set height
+                        });
+
+                        exportContainer.removeChild(exportSlide);
+
+                        const dataUrl = canvas.toDataURL('image/png');
+                        const slide = pptx.addSlide();
+                        slide.addImage({ data: dataUrl, x: 0, y: 0, w: '100%', h: '100%' });
+                    }
+
+                    await pptx.writeFile({ fileName: 'catapult_ご紹介資料.pptx' });
+                } catch (err) {
+                    console.error("PPTX generation failed:", err);
+                    alert("PowerPointファイルの生成中にエラーが発生しました。");
+                } finally {
+                    setLoadingState(downloadPptxBtn, false);
+                    exportContainer.innerHTML = '';
+                }
             });
 
             updateSlidePosition();
